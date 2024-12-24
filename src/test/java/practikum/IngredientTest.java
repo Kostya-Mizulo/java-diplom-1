@@ -1,7 +1,6 @@
 package practikum;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
@@ -9,8 +8,8 @@ import test_helpers.FloatGenerator;
 import test_helpers.IngredientTypeGenerator;
 import test_helpers.StringGenerator;
 
-public class IngredientTest {
 
+public class IngredientTest {
     @Test
     public void checkIngredientObjectcreatedNormallyTest(){
         Ingredient ingredient = new Ingredient(IngredientType.SAUCE,
@@ -19,6 +18,7 @@ public class IngredientTest {
 
         Assert.assertNotNull(ingredient);
     }
+
 
     @Test
     public void getPriceReturnsValidValueTest(){
@@ -29,8 +29,9 @@ public class IngredientTest {
                 StringGenerator.generateName(),
                 price);
 
-        Assert.assertEquals(price, ingredient.getPrice());
+        Assert.assertEquals(price, ingredient.getPrice(), 0.00001);
     }
+
 
     @Test
     public void getNameReturnsValidValueTest(){
@@ -43,6 +44,7 @@ public class IngredientTest {
 
         Assert.assertEquals(name, ingredient.getName());
     }
+
 
     @Test
     public void getIngredientTypeReturnsValidValueTest(){

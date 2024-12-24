@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import praktikum.IngredientType;
 
+
 public class IngredientTypeTest {
     @Test
     public void checkIngredientTypeSauceExistsTest(){
@@ -11,6 +12,7 @@ public class IngredientTypeTest {
 
         Assert.assertEquals(IngredientType.SAUCE, sauce);
     }
+
 
     @Test
     public void checkIngredientTypeFillingExistsTest(){

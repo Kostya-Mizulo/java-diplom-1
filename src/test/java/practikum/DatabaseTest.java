@@ -6,8 +6,8 @@ import praktikum.Bun;
 import praktikum.Database;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
-
 import java.util.List;
+
 
 public class DatabaseTest {
     @Test
@@ -23,6 +23,7 @@ public class DatabaseTest {
                 returnlistOfBunsAsString(expectedList),
                 returnlistOfBunsAsString(db.availableBuns()));
     }
+
 
     @Test
     public void availableIngredientsReturnsListFromConstructorTest(){
@@ -47,14 +48,17 @@ public class DatabaseTest {
         for (Bun bun : buns){
             listOfBunsAsString += bun.getName() + bun.getPrice();
         }
+
         return listOfBunsAsString;
     }
+
 
     private static String returnlistOfIngredientsAsString(List<Ingredient> ingredients){
         String listOfIngredientsAsString = "";
         for (Ingredient ingredient : ingredients){
             listOfIngredientsAsString += ingredient.getType() + ingredient.getName() + ingredient.getPrice();
         }
+
         return listOfIngredientsAsString;
     }
 }

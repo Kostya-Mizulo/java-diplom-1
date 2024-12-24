@@ -8,11 +8,13 @@ import praktikum.Bun;
 import test_helpers.FloatGenerator;
 import test_helpers.StringGenerator;
 
+
 @RunWith(Parameterized.class)
 public class BunParameterizedTest {
     private final String errorText;
     private final String name;
     private final float price;
+
 
     public BunParameterizedTest(String errorText,
                                 String name,
@@ -21,6 +23,7 @@ public class BunParameterizedTest {
         this.name = name;
         this.price = price;
     }
+
 
     @Parameterized.Parameters(name = "Create Bun with name - {1}, price - {2}")
     public static Object[][] getParameters(){
@@ -37,6 +40,7 @@ public class BunParameterizedTest {
                 {"Error with creation bun with min float price", StringGenerator.generateName(), -Float.MAX_VALUE}
         };
     }
+
 
     @Test
     public void bunObjectCreatedSuccessfullyWithDifferentValidValuesTest(){
